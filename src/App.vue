@@ -1,12 +1,6 @@
 <template>
 <div >
-  <!-- 
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/contact">Contact</router-link>
-  </nav>
-  -->
+ 
 <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;" data-bs-theme="light" >
   <div class="container">
     <a class="navbar-brand" href="/">Navbar</a>
