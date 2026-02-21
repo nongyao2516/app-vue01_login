@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 21, 2026 at 10:57 AM
+-- Generation Time: Feb 21, 2026 at 11:53 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -65,7 +65,8 @@ INSERT INTO `customers` (`customer_id`, `firstName`, `lastName`, `phone`, `usern
 (00000003, 'John', 'Doe', '0991122334', 'johnd', 'securepwd'),
 (00000004, 'เมษา', 'เด็กดี', '038743690', 'mesa', '$2y$10$tSSl6/EruDffk'),
 (00000005, 'มานะ', 'มีใจ', '038754920', 'mana', '$2y$10$tA0rn9nxLE.i6q5U5qvgMuij0eJZJkNEQMTRn3lJsDECEt1jSq58u'),
-(00000006, 'ชูใจ', 'เด็กดี', '038743690', 'shoojai', '$2y$10$9JiaB6GjUeHH1pWQlsYpyebE7FVT8zZgINfMV2Ud16XKRlPGCtW5m');
+(00000006, 'ชูใจ ', 'เด็กดี', '038743690', 'user1', '$2y$10$gIcUToRl0NXBRTmwyWJDzu1loBC/I9CAeT2c1dydaqJjnDNJzb2uC'),
+(00000007, 'เมษา', 'เด็กดี', '038743690', 'admin', '$2y$10$xIzKNQvvVZxRnj1mFB9p8uo/egHdgN6sEKTF6M2PMFLxz0mNIUirC');
 
 -- --------------------------------------------------------
 
@@ -192,7 +193,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `customer_id` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `employees`
