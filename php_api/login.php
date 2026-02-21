@@ -1,7 +1,7 @@
 <?php
 include 'condb.php'; // ไฟล์เชื่อมต่อ DB
 
-header("Content-Type: application/json");
+
 
 $data = json_decode(file_get_contents("php://input"), true);
 
