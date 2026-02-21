@@ -8,7 +8,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "db_shop";
+$dbname = "db_shop02";
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
