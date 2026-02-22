@@ -1,5 +1,7 @@
 <template>
-  <div class="container mt-4 col-md-4 bg-body-secondary ">
+ 
+ <div class="container mt-4 col-md-4 bg-body-secondary ">
+
     <h2 class="text-center mb-3">ลงทะเบียน</h2>
     <form @submit.prevent="addData">
       <div class="mb-2">

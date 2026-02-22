@@ -11,20 +11,32 @@
         <!-- card แสดงข้อมูลสินค้า -->
         <div class="card shadow-sm mb-4">
           <!-- แสดงรูปสินค้า โดย path รูปมาจาก server -->
-          <img
-             :src="'http://localhost/app-vue01/php_api/image/' + data.image"
-            width="70%"
-            height="300"
-            class="card-img-top"
-            :alt="data.name"
-          >
-
+          <div class="card h-100 shadow-sm">
+            <img
+               :src="'http://localhost/app-vue01/php_api/uploads/' + data.image"
+              class="card-img-top"
+              style="height: 200px; object-fit: cover;"
+            />
+          </div>
           <!-- เนื้อหาใน card -->
           <div class="card-body text-center">
             <h5 class="card-title">{{ data.product_name }}</h5> <!-- ชื่อสินค้า -->
             <p class="card-text">{{ data.price }} บาท</p>       <!-- ราคาสินค้า -->
-            <button class="btn btn-primary">สั่งซื้อ</button>      <!-- ปุ่มสั่งซื้อ -->
+           <!-- ✅ ปุ่ม Detail -->
+              <router-link 
+                :to="'/ProductDetail?id=' + data.product_id"
+                class="btn btn-sm btn-outline-primary w-100 mb-2"
+              >
+                ดูรายละเอียด
+              </router-link>
+        
+          
           </div>
+
+
+
+
+          
         </div>
       </div>
     </div>

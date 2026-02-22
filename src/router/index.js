@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/Home.vue'
 
 const routes = [
+
   {
     path: '/',
     name: 'home',
@@ -36,7 +37,7 @@ const routes = [
     path: '/add_customer',
     name: 'add_customer',
     component: () => import('../views/Add_customer.vue'),
-    meta: { requiresAuth: true }   // ✅ บังคับ login
+    meta: { requiresAuth: true }
   },
 
   {
@@ -96,11 +97,27 @@ const routes = [
     path: '/login',
     name: 'login',
     component: () => import('../views/login.vue')
+  },
+
+  /* ✅ Product Detail (รองรับ 2 แบบ) */
+
+  // แบบ params (แนะนำ)
+  {
+    path: '/ProductDetail/:id',
+    name: 'ProductDetail',
+    component: () => import('../views/ProductDetail.vue')
+  },
+
+  // แบบ query string (สำรอง)
+  {
+    path: '/ProductDetail',
+    component: () => import('../views/ProductDetail.vue')
   }
+
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes
 })
 
@@ -109,13 +126,11 @@ router.beforeEach((to, from, next) => {
 
   const isLoggedIn = localStorage.getItem("adminLogin")
 
-  // ถ้าหน้านั้นต้อง login แต่ยังไม่ login
   if (to.meta.requiresAuth && !isLoggedIn) {
     next('/login')
   } 
-  // ถ้า login แล้วแต่พยายามเข้าหน้า login
   else if (to.path === '/login' && isLoggedIn) {
-    next('/')   // หรือ dashboard
+    next('/')
   }
   else {
     next()
