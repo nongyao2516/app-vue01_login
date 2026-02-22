@@ -99,18 +99,11 @@ const routes = [
     component: () => import('../views/login.vue')
   },
 
-  /* ✅ Product Detail (รองรับ 2 แบบ) */
+  /* ✅ Product Detail */
 
-  // แบบ params (แนะนำ)
-  {
-    path: '/ProductDetail/:id',
-    name: 'ProductDetail',
-    component: () => import('../views/ProductDetail.vue')
-  },
-
-  // แบบ query string (สำรอง)
   {
     path: '/ProductDetail',
+    name: 'ProductDetail',
     component: () => import('../views/ProductDetail.vue')
   }
 
